@@ -1,0 +1,105 @@
+:root{--blue:#325334;--muted:#6b7280}
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial, sans-serif;background:#f3f6fb;color:#111}
+.app{display:flex;min-height:100vh}
+.sidebar{width:220px;background:linear-gradient(180deg,var(--blue),#1d4ed8);color:white;padding:18px;display:flex;flex-direction:column;gap:12px}
+.brand{font-weight:800;font-size:20px}
+.sidebar nav{display:flex;flex-direction:column;gap:8px;margin-top:10px}
+.sidebar a{color:rgba(255,255,255,0.9);text-decoration:none;padding:8px 10px;border-radius:8px}
+.sidebar a.active{background:rgba(255,255,255,0.12)}
+.main{flex:1;display:flex;flex-direction:column}
+.header{padding:18px 20px;background:white;border-bottom:1px solid #eef2ff}
+.header h1{margin:0;color:var(--blue)}
+.content{padding:20px}
+.card{background:white;padding:14px;border-radius:10px;box-shadow:0 6px 18px rgba(28,45,80,0.06);margin-bottom:12px}
+input,textarea{padding:10px;border-radius:8px;border:1px solid #e6eefc;width:100%}
+button{background:var(--blue);color:white;border:none;padding:8px 12px;border-radius:8px;cursor:pointer}
+
+/* added animated / UI styles */
+:root {
+  --accent: #2563eb;
+  --glass: rgba(255,255,255,0.7);
+  --muted-2: #94a3b8;
+}
+
+.header {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  position:relative;
+  z-index:20;
+  background:linear-gradient(90deg,#fff, #fbfdff 60%);
+  box-shadow:0 4px 18px rgba(2,6,23,0.04);
+}
+
+.header .brand-row {display:flex;align-items:center;gap:14px}
+.logo {
+  width:48px;height:48px;border-radius:10px;
+  background:linear-gradient(135deg,var(--accent),#3b82f6);
+  display:flex;align-items:center;justify-content:center;color:white;font-weight:800;
+  box-shadow:0 6px 18px rgba(59,130,246,0.18);
+  transform:translateY(0);
+  animation: float 4s ease-in-out infinite;
+}
+@keyframes float {
+  0%{transform:translateY(0)}
+  50%{transform:translateY(-6px)}
+  100%{transform:translateY(0)}
+}
+
+.header .auth {
+  display:flex;gap:8px;align-items:center;
+}
+.btn {
+  display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:12px;font-weight:600;
+  transition:all .22s ease;cursor:pointer;border:1px solid rgba(0,0,0,0.04);
+}
+.btn.primary {background:var(--accent);color:#fff;box-shadow:0 8px 20px rgba(37,99,235,0.12);}
+.btn.ghost {background:transparent;color:var(--accent);border:1px solid rgba(37,99,235,0.12);}
+
+.btn:hover {transform:translateY(-3px);box-shadow:0 14px 30px rgba(2,6,23,0.06)}
+
+.sidebar a {transition:all .18s ease}
+.sidebar a:hover {transform:translateX(6px);opacity:0.98}
+
+.content-grid {
+  display:grid;grid-template-columns: 1fr;gap:18px;
+}
+@media(min-width:1000px){ .content-grid{grid-template-columns: 1fr 380px;} }
+
+/* Section card: attractive description + image + precautions + games */
+.section-card {
+  display:flex;gap:16px;align-items:flex-start;
+  background:linear-gradient(180deg,#ffffff,#fbfdff);padding:18px;border-radius:14px;
+  box-shadow:0 10px 30px rgba(16,24,40,0.04);
+}
+.section-card .meta {flex:1}
+.section-card h3 {margin:0 0 8px 0;color:#0f172a}
+.section-card p {margin:0;color:var(--muted-2)}
+.section-card .side {
+  width:160px;min-width:140px;border-radius:10px;overflow:hidden;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;background:linear-gradient(180deg,#f8fafc,#eef2ff);
+  padding:10px;
+}
+.section-image {width:100%;height:100px;object-fit:cover;border-radius:8px;margin-bottom:8px}
+
+/* precautions */
+.precautions {margin-top:10px;display:flex;flex-direction:column;gap:8px}
+.precaution {
+  display:flex;gap:10px;align-items:center;background:#fff;padding:8px;border-radius:10px;border-left:4px solid #fde68a;
+  box-shadow:0 6px 14px rgba(15,23,42,0.03);
+}
+.precaution img {width:42px;height:42px;border-radius:6px;object-fit:cover}
+
+/* games list */
+.games-list {margin-top:10px;display:flex;flex-direction:column;gap:6px}
+.games-list a {color:var(--accent);text-decoration:none;padding:8px;border-radius:8px;background:rgba(37,99,235,0.06);display:inline-block;width:max-content}
+.games-list a:hover {background:rgba(37,99,235,0.12)}
+
+/* logs panel */
+.logs-panel {background:#0f172a;color:#fff;padding:12px;border-radius:12px;min-height:120px}
+.log-item {background:rgba(255,255,255,0.03);padding:8px;border-radius:8px;margin-bottom:8px}
+
+/* small interactive hints */
+.hint {font-size:13px;color:var(--muted-2);margin-top:8px}

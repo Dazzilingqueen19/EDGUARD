@@ -1,0 +1,1 @@
+import React from 'react'; export default function Emotion(){ return (<div><h2>Webcam Emotion Recognition</h2><div className='card'><p>Run backend/emotion_detector.py to stream webcam emotion events to the backend in real-time.</p></div></div>); }

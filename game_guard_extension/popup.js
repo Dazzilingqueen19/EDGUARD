@@ -1,0 +1,1 @@
+// popup logic handled inline in popup.html if needed

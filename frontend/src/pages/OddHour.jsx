@@ -1,0 +1,1 @@
+import React from 'react'; export default function OddHour(){ return (<div><h2>Odd-Hour Activity Detection</h2><div className='card'><p>Heartbeats from the extension are monitored; backend flags odd-hour events automatically.</p></div></div>); }

@@ -1,0 +1,1 @@
+import React from 'react'; export default function Mobile(){ return (<div><h2>Mobile App</h2><div className='card'><p>Run the Expo app inside /mobile to register push tokens and view logs on the go.</p></div></div>); }

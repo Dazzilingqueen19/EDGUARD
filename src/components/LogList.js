@@ -1,0 +1,1 @@
+import React from "react"; export default function LogList({logs}){ if(!logs||logs.length===0) return <div>No events.</div>; return (<div>{logs.map(l=>(<div key={l.id} style={{padding:10,borderBottom:'1px solid #eee'}}><strong>{l.event}</strong><div>{l.data}</div><div style={{color:'#666'}}>Risk: {l.risk_score}</div></div>))}</div>); }

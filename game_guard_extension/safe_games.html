@@ -1,0 +1,18 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Safe Games</title>
+<style>body{font-family:Arial;padding:18px;background:#f7fbff}.card{background:white;padding:14px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06);margin-bottom:12px}h1{color:#2563eb}</style>
+</head><body>
+<h1>Safe Games</h1>
+<div id="list"></div>
+<script>
+chrome.storage.sync.get(['keywords','safe_site'], cfg=>{
+  const defaultGames = [{title:'Google Games', url:'https://games.google.com'}];
+  const safe = cfg.safe_games || defaultGames;
+  const container = document.getElementById('list');
+  (safe).forEach(g=>{
+    const el = document.createElement('div'); el.className='card';
+    el.innerHTML = `<strong>${g.title || g.url}</strong><div style="margin-top:6px"><a href="${g.url || '#'}" target="_blank">${g.url || ''}</a></div>`;
+    container.appendChild(el);
+  });
+});
+</script>
+</body></html>

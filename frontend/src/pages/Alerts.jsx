@@ -1,0 +1,1 @@
+import React from 'react'; export default function Alerts(){ return (<div><h2>Alerts</h2><div className='card'><p>Twilio SMS and Firebase push helpers are available in backend/notify.py. Configure env vars to enable.</p></div></div>); }
