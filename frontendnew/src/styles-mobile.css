@@ -1,0 +1,685 @@
+/* ============================================
+   MOBILE RESPONSIVE DESIGN FOR EDGUARD
+   Optimized for all screen sizes
+   ============================================ */
+
+/* ============================================
+   MOBILE BASE STYLES (320px - 640px)
+   ============================================ */
+
+@media (max-width: 768px) {
+  /* General Mobile Styles */
+  body {
+    font-size: 14px;
+    overflow-x: hidden;
+  }
+
+  /* Layout adjustments */
+  .app {
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  /* Sidebar becomes horizontal/hidden */
+  .sidebar {
+    width: 100%;
+    height: auto;
+    padding: 12px 0;
+    flex-direction: row;
+    gap: 0;
+    position: fixed;
+    bottom: 0;
+    z-index: 1000;
+    overflow-x: auto;
+  }
+
+  .brand {
+    display: none;
+  }
+
+  .sidebar nav {
+    flex-direction: row;
+    gap: 0;
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  .sidebar a {
+    padding: 12px 14px;
+    font-size: 12px;
+    white-space: nowrap;
+    flex: 1;
+    text-align: center;
+  }
+
+  /* Main content */
+  .main {
+    min-height: calc(100vh - 60px);
+    padding-bottom: 60px;
+  }
+
+  /* Header adjustments */
+  .header {
+    padding: 12px 16px;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .header h1 {
+    font-size: 20px;
+  }
+
+  .header-right {
+    width: 100%;
+  }
+
+  /* Content padding */
+  .content {
+    padding: 12px;
+  }
+
+  /* Cards */
+  .card {
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+  }
+
+  /* Buttons - Touch friendly */
+  button {
+    padding: 12px 16px;
+    min-height: 44px;
+    font-size: 14px;
+    border-radius: 8px;
+    width: 100%;
+    margin-bottom: 8px;
+  }
+
+  /* Forms */
+  input,
+  textarea,
+  select {
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    width: 100%;
+    margin-bottom: 12px;
+  }
+
+  /* Form groups */
+  .form-group {
+    margin-bottom: 16px;
+  }
+
+  .form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 13px;
+    font-weight: 500;
+  }
+
+  /* Grid layouts - Stack on mobile */
+  .grid,
+  .features-grid {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+
+  /* Table responsive */
+  table {
+    font-size: 12px;
+  }
+
+  table th,
+  table td {
+    padding: 8px 4px;
+  }
+
+  /* Modals */
+  .modal-content {
+    width: 95% !important;
+    max-width: none !important;
+    margin: auto;
+    border-radius: 12px;
+  }
+
+  .modal-header {
+    padding: 16px;
+  }
+
+  .modal-body {
+    padding: 16px;
+    max-height: calc(100vh - 120px);
+    overflow-y: auto;
+  }
+
+  /* Page headers for dashboard */
+  .page-header {
+    padding: 20px 16px;
+    margin-bottom: 16px;
+  }
+
+  .header-content {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .header-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 30px;
+  }
+
+  .header-text h1 {
+    font-size: 20px;
+    margin-bottom: 4px;
+  }
+
+  .header-text p {
+    font-size: 13px;
+  }
+
+  /* Feature cards */
+  .feature-card {
+    padding: 16px;
+  }
+
+  .feature-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+  }
+
+  .feature-card h3 {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+
+  .feature-card p {
+    font-size: 13px;
+  }
+
+  /* Navbar/Header actions */
+  .header-actions {
+    flex-direction: column !important;
+    gap: 8px !important;
+    width: 100%;
+  }
+
+  .auth-links {
+    width: 100%;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .login-link,
+  .signup-link {
+    width: 100%;
+  }
+
+  .user-menu {
+    width: 100%;
+  }
+
+  /* Dashboard charts - responsive */
+  .chart-container {
+    height: 250px;
+    margin-bottom: 16px;
+  }
+
+  canvas {
+    max-height: 250px !important;
+  }
+
+  /* Timeline/List items */
+  .timeline-item,
+  .list-item {
+    padding: 12px;
+    margin-bottom: 8px;
+  }
+
+  /* Badges/Tags */
+  .badge {
+    padding: 4px 8px;
+    font-size: 11px;
+  }
+
+  /* Statistics */
+  .stat-item {
+    padding: 12px;
+  }
+
+  .stat-number {
+    font-size: 24px;
+  }
+
+  .stat-item p {
+    font-size: 12px;
+  }
+
+  /* Alerts */
+  .alert {
+    padding: 12px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    font-size: 13px;
+  }
+
+  /* Icons sizing */
+  i {
+    font-size: 18px;
+  }
+
+  .icon-lg {
+    font-size: 32px;
+  }
+
+  .icon-sm {
+    font-size: 14px;
+  }
+
+  /* Flex layouts - responsive */
+  .flex-row {
+    flex-direction: column;
+  }
+
+  /* Gap adjustments */
+  .gap-3 {
+    gap: 8px !important;
+  }
+
+  .gap-4 {
+    gap: 12px !important;
+  }
+
+  /* Text sizes - mobile optimized */
+  h1 {
+    font-size: 24px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  h3 {
+    font-size: 16px;
+  }
+
+  h4 {
+    font-size: 14px;
+  }
+
+  /* Sections */
+  section {
+    padding: 16px 12px;
+    margin-bottom: 12px;
+  }
+
+  /* Navigation tabs */
+  .nav-tabs {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .nav-tabs button {
+    flex: 1;
+    min-width: 80px;
+  }
+
+  /* Login/Signup forms */
+  .auth-container {
+    padding: 12px;
+    min-height: 100vh;
+  }
+
+  .auth-card {
+    width: 100% !important;
+    max-width: 100%;
+    padding: 20px !important;
+    margin: 0 !important;
+  }
+
+  .auth-content {
+    grid-template-columns: 1fr !important;
+  }
+
+  .auth-features {
+    display: none !important;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: 12px;
+  }
+
+  /* Password strength indicator */
+  .password-strength {
+    height: 6px;
+    margin-bottom: 8px;
+  }
+
+  /* Requirements list */
+  .requirements-list {
+    font-size: 12px;
+  }
+
+  .requirements-list li {
+    padding: 4px 0;
+  }
+
+  /* Navbar responsive */
+  .navbar-brand {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .logo {
+    font-size: 20px;
+  }
+
+  .tagline {
+    font-size: 10px;
+  }
+
+  .parent-dashboard-link {
+    padding: 8px 12px !important;
+    font-size: 12px !important;
+  }
+
+  .parent-dashboard-link span {
+    display: none;
+  }
+
+  /* Dropdown menus */
+  .dropdown-menu {
+    min-width: 160px;
+    font-size: 13px;
+  }
+
+  /* Accessibility - Larger touch targets */
+  input[type='checkbox'],
+  input[type='radio'] {
+    min-width: 20px;
+    min-height: 20px;
+  }
+
+  /* Scrollable areas */
+  .scrollable {
+    max-height: calc(100vh - 200px);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Loading spinner */
+  .spinner {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+/* ============================================
+   SMALL PHONES (320px - 480px)
+   ============================================ */
+
+@media (max-width: 480px) {
+  /* Extra small adjustments */
+  body {
+    font-size: 13px;
+  }
+
+  .header {
+    padding: 10px 12px;
+  }
+
+  .header h1 {
+    font-size: 18px;
+  }
+
+  .content {
+    padding: 8px;
+  }
+
+  .card {
+    padding: 10px;
+    border-radius: 6px;
+  }
+
+  button {
+    padding: 10px 12px;
+    min-height: 40px;
+    font-size: 13px;
+  }
+
+  input,
+  textarea {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .page-header {
+    padding: 16px 12px;
+    margin-bottom: 12px;
+  }
+
+  .header-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+  }
+
+  .feature-card {
+    padding: 12px;
+  }
+
+  .feature-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  h3 {
+    font-size: 15px;
+  }
+
+  /* Chart responsive for small phones */
+  .chart-container {
+    height: 200px;
+  }
+
+  /* Table horizontal scroll */
+  table {
+    font-size: 11px;
+    display: block;
+    overflow-x: auto;
+    width: 100%;
+  }
+
+  table th,
+  table td {
+    padding: 6px 3px;
+  }
+
+  /* Modal smaller */
+  .modal-content {
+    width: 90% !important;
+  }
+
+  /* Grid - single column */
+  .grid,
+  .features-grid,
+  .stats-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Sidebar better for small phones */
+  .sidebar a {
+    padding: 10px 8px;
+    font-size: 11px;
+  }
+
+  /* Reduced gaps */
+  gap {
+    gap: 6px !important;
+  }
+}
+
+/* ============================================
+   TABLETS (769px - 1024px)
+   ============================================ */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  /* Tablet optimizations */
+  .sidebar {
+    width: 200px;
+  }
+
+  .header {
+    padding: 16px 24px;
+  }
+
+  .content {
+    padding: 16px;
+  }
+
+  .grid,
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  button {
+    padding: 10px 14px;
+    min-height: 40px;
+  }
+
+  .page-header {
+    padding: 30px 24px;
+  }
+
+  .auth-card {
+    max-width: 450px;
+  }
+}
+
+/* ============================================
+   LANDSCAPE MODE (Mobile)
+   ============================================ */
+
+@media (max-height: 500px) and (orientation: landscape) {
+  .main {
+    padding-bottom: 0;
+  }
+
+  .sidebar {
+    position: relative;
+    height: auto;
+  }
+
+  .page-header {
+    padding: 15px 20px;
+    margin-bottom: 15px;
+  }
+
+  .header-content {
+    gap: 15px;
+  }
+
+  button {
+    padding: 8px 12px;
+    min-height: 36px;
+  }
+
+  input,
+  textarea {
+    padding: 8px;
+  }
+
+  .feature-card {
+    padding: 10px;
+  }
+}
+
+/* ============================================
+   TOUCH DEVICE OPTIMIZATIONS
+   ============================================ */
+
+@media (hover: none) and (pointer: coarse) {
+  /* Touch-specific optimizations */
+  button,
+  a,
+  input,
+  select {
+    min-height: 44px;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* Remove hover effects on touch devices */
+  button:hover {
+    opacity: 1;
+  }
+
+  /* Larger click targets */
+  .nav-item,
+  .menu-item {
+    padding: 12px 16px;
+  }
+}
+
+/* ============================================
+   PRINT STYLES
+   ============================================ */
+
+@media print {
+  .sidebar,
+  .header,
+  button,
+  .no-print {
+    display: none;
+  }
+
+  .content {
+    padding: 0;
+  }
+
+  body {
+    background: white;
+  }
+}
+
+/* ============================================
+   ACCESSIBILITY
+   ============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #1a1a1a;
+    color: #ffffff;
+  }
+
+  .card {
+    background: #2d2d2d;
+  }
+
+  input,
+  textarea,
+  select {
+    background: #333333;
+    color: #ffffff;
+    border-color: #444444;
+  }
+}

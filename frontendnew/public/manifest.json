@@ -1,0 +1,74 @@
+{
+  "name": "EDGUARD - Parental Control & Safety",
+  "short_name": "EDGUARD",
+  "description": "Advanced parent monitoring, emotion detection, chat analysis, and child safety platform with real-time alerts",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "theme_color": "#0f172a",
+  "background_color": "#ffffff",
+  "icons": [
+    {
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'><rect fill='%230f172a' width='192' height='192'/><circle cx='96' cy='60' r='35' fill='%232563eb'/><path d='M 60 120 Q 60 100 96 100 Q 132 100 132 120 L 132 150 Q 132 160 122 160 L 70 160 Q 60 160 60 150 Z' fill='%2310b981'/></svg>",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><rect fill='%230f172a' width='512' height='512'/><circle cx='256' cy='150' r='90' fill='%232563eb'/><path d='M 150 300 Q 150 250 256 250 Q 362 250 362 300 L 362 400 Q 362 430 332 430 L 180 430 Q 150 430 150 400 Z' fill='%2310b981'/></svg>",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Dashboard",
+      "short_name": "Dashboard",
+      "description": "View main monitoring dashboard",
+      "url": "/dashboard",
+      "icons": []
+    },
+    {
+      "name": "Emotion Detection",
+      "short_name": "Emotion",
+      "description": "Real-time emotion monitoring",
+      "url": "/emotion",
+      "icons": []
+    },
+    {
+      "name": "Chat Analysis",
+      "short_name": "Chat",
+      "description": "NLP-based chat monitoring",
+      "url": "/nlp",
+      "icons": []
+    },
+    {
+      "name": "Alerts",
+      "short_name": "Alerts",
+      "description": "View risk alerts",
+      "url": "/alerts",
+      "icons": []
+    }
+  ],
+  "categories": ["productivity", "utilities", "family"],
+  "screenshots": [
+    {
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 540 720'><rect fill='%23f0f9ff' width='540' height='720'/><rect fill='%230f172a' width='540' height='80'/><text x='270' y='45' dominant-baseline='middle' text-anchor='middle' font-size='32' font-weight='bold' fill='white' font-family='system-ui'>EDGUARD</text><rect x='30' y='120' width='480' height='150' fill='%23e0e7ff' rx='8'/><text x='270' y='200' dominant-baseline='middle' text-anchor='middle' font-size='18' font-weight='bold' fill='%230f172a' font-family='system-ui'>Real-time Monitoring</text></svg>",
+      "sizes": "540x720",
+      "type": "image/svg+xml",
+      "form_factor": "narrow"
+    }
+  ],
+  "share_target": {
+    "action": "/share",
+    "method": "POST",
+    "enctype": "multipart/form-data",
+    "params": {
+      "title": "title",
+      "text": "text",
+      "url": "url"
+    }
+  }
+}

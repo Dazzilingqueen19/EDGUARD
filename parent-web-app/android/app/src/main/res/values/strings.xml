@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">EDGUARD Parent Alerts</string>
+    <string name="title_activity_main">EDGUARD Parent Alerts</string>
+    <string name="package_name">com.edguard.parentalerts</string>
+    <string name="custom_url_scheme">com.edguard.parentalerts</string>
+</resources>

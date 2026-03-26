@@ -1,0 +1,11 @@
+{
+  "appId": "com.edguard.parentalerts",
+  "appName": "EDGUARD Parent Alerts",
+  "webDir": "dist",
+  "bundledWebRuntime": false,
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 0
+    }
+  }
+}
