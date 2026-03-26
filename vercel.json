@@ -1,24 +1,40 @@
 {
   "version": 2,
-  "buildCommand": "npm run build --prefix frontendnew && npm run build --prefix parent-web-app",
-  "outputDirectory": "frontendnew/dist",
-  "env": {
-    "VERCEL_ENV": "production"
-  },
-  "rewrites": [
+  "builds": [
     {
-      "source": "/api/:path*",
-      "destination": "api/index.py?path=:path*"
+      "src": "frontendnew/package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "buildCommand": "npm install && npm run build",
+        "outputDirectory": "dist"
+      }
+    },
+    {
+      "src": "parent-web-app/package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "buildCommand": "npm install && npm run build",
+        "outputDirectory": "dist"
+      }
+    },
+    {
+      "src": "api/index.py",
+      "use": "@vercel/python",
+      "config": {
+        "pythonVersion": "3.11",
+        "requirementsFile": "vercel-requirements.txt"
+      }
     }
   ],
   "routes": [
     {
       "src": "/api/(.*)",
-      "dest": "/api/index.py"
+      "dest": "api/index.py"
     },
     {
       "src": "/parent/(.*)",
-      "dest": "/parent-web-app/dist/$1"
+      "dest": "/parent-web-app/dist/$1",
+      "methods": ["GET", "HEAD"]
     },
     {
       "src": "/parent(.*)",
@@ -26,15 +42,12 @@
     },
     {
       "src": "/(.*)",
-      "dest": "/frontendnew/dist/$1"
+      "dest": "/frontendnew/dist/$1",
+      "methods": ["GET", "HEAD"]
     },
     {
-      "src": "/(.*)",
+      "src": "(.*)",
       "dest": "/frontendnew/dist/index.html"
     }
-  ],
-  "env": {
-    "PYTHON_VERSION": "3.11"
-  },
-  "buildCommand": "npm run build --prefix frontendnew && npm run build --prefix parent-web-app"
+  ]
 }
