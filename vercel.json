@@ -1,0 +1,54 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "frontendnew/package.json",
+      "use": "@vercel/node",
+      "config": {
+        "zeroConfig": true
+      }
+    },
+    {
+      "src": "parent-web-app/package.json",
+      "use": "@vercel/node",
+      "config": {
+        "zeroConfig": true
+      }
+    },
+    {
+      "src": "api/index.py",
+      "use": "@vercel/python",
+      "config": {
+        "pythonVersion": "3.11"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "api/index.py"
+    },
+    {
+      "src": "/parent/(.*)",
+      "dest": "parent-web-app/dist/$1",
+      "methods": ["GET", "HEAD"]
+    },
+    {
+      "src": "/parent(.*)",
+      "dest": "parent-web-app/dist/index.html"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "frontendnew/dist/$1",
+      "methods": ["GET", "HEAD"]
+    },
+    {
+      "src": "(.*)",
+      "dest": "frontendnew/dist/index.html"
+    }
+  ],
+  "env": {
+    "PYTHON_VERSION": "3.11"
+  },
+  "buildCommand": "npm run build --prefix frontendnew && npm run build --prefix parent-web-app"
+}
