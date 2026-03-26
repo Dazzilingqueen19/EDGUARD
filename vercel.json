@@ -19,7 +19,8 @@
       "src": "api/index.py",
       "use": "@vercel/python",
       "config": {
-        "pythonVersion": "3.11"
+        "pythonVersion": "3.11",
+        "requirementsFile": "vercel-requirements.txt"
       }
     }
   ],
