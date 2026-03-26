@@ -1,0 +1,9 @@
+{
+  "name": "edguard-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "cd frontendnew && npm install && npm run build",
+    "dev": "cd frontendnew && npm run dev"
+  }
+}
